@@ -11,8 +11,12 @@ import {
   ArrowRight,
   Sparkles
 } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
 const Services = () => {
+  const [visibleCards, setVisibleCards] = useState<boolean[]>([]);
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
+
   const services = [
     {
       icon: Globe,
@@ -58,6 +62,39 @@ const Services = () => {
     }
   ];
 
+  useEffect(() => {
+    const observers: IntersectionObserver[] = [];
+    
+    cardRefs.current.forEach((card, index) => {
+      if (card) {
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                setVisibleCards(prev => {
+                  const newVisible = [...prev];
+                  newVisible[index] = true;
+                  return newVisible;
+                });
+              }
+            });
+          },
+          {
+            threshold: 0.1,
+            rootMargin: '50px'
+          }
+        );
+        
+        observer.observe(card);
+        observers.push(observer);
+      }
+    });
+
+    return () => {
+      observers.forEach(observer => observer.disconnect());
+    };
+  }, []);
+
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
@@ -77,8 +114,16 @@ const Services = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <Card 
-              key={index} 
-              className="bg-white border-gray-200 hover:border-orange-300 hover:shadow-lg transition-all duration-300 group hover:transform hover:-translate-y-2"
+              key={index}
+              ref={el => cardRefs.current[index] = el}
+              className={`bg-white border-gray-200 hover:border-orange-300 hover:shadow-lg transition-all duration-700 group hover:transform hover:-translate-y-2 ${
+                visibleCards[index] 
+                  ? 'opacity-100 translate-y-0' 
+                  : 'opacity-0 translate-y-8'
+              }`}
+              style={{
+                transitionDelay: `${index * 150}ms`
+              }}
             >
               <CardHeader className="pb-4">
                 <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${service.color} p-3 mb-4 group-hover:scale-110 transition-transform duration-300`}>
