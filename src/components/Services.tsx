@@ -17,60 +17,60 @@ const Services = () => {
     {
       icon: Globe,
       title: "Web Development",
-      description: "Modern, responsive websites built with cutting-edge technologies like React, Next.js, and TypeScript.",
+      description: "Custom web applications built with modern technologies like React, Next.js, and TypeScript for optimal performance.",
       features: ["Responsive Design", "SEO Optimized", "Fast Loading", "Modern UI/UX"],
-      color: "from-blue-500 to-cyan-500"
-    },
-    {
-      icon: Smartphone,
-      title: "Mobile Apps",
-      description: "Native and cross-platform mobile applications that deliver exceptional user experiences across all devices.",
-      features: ["iOS & Android", "React Native", "Cross-Platform", "Native Performance"],
-      color: "from-purple-500 to-pink-500"
-    },
-    {
-      icon: Brain,
-      title: "AI Solutions",
-      description: "Intelligent applications powered by machine learning and artificial intelligence to automate and optimize your business.",
-      features: ["Machine Learning", "AI Integration", "Automation", "Data Analytics"],
-      color: "from-green-500 to-teal-500"
-    },
-    {
-      icon: Cloud,
-      title: "Cloud Services",
-      description: "Scalable cloud infrastructure and deployment solutions for reliable, high-performance applications.",
-      features: ["AWS/Azure", "DevOps", "Scalable", "Secure"],
       color: "from-orange-500 to-red-500"
     },
     {
+      icon: Smartphone,
+      title: "Mobile App Development",
+      description: "Native and cross-platform mobile applications that deliver exceptional user experiences across all devices.",
+      features: ["iOS & Android", "React Native", "Cross-Platform", "Native Performance"],
+      color: "from-red-500 to-orange-600"
+    },
+    {
+      icon: Brain,
+      title: "AI & Machine Learning",
+      description: "Intelligent applications powered by machine learning and artificial intelligence to automate and optimize your business processes.",
+      features: ["Machine Learning", "AI Integration", "Process Automation", "Data Analytics"],
+      color: "from-orange-600 to-yellow-500"
+    },
+    {
+      icon: Cloud,
+      title: "Cloud Solutions",
+      description: "Scalable cloud infrastructure and deployment solutions for reliable, high-performance applications and data management.",
+      features: ["AWS/Azure/GCP", "DevOps", "Scalable Architecture", "Security"],
+      color: "from-red-600 to-orange-500"
+    },
+    {
       icon: ShoppingCart,
-      title: "E-Commerce",
-      description: "Complete e-commerce solutions with payment integration, inventory management, and analytics.",
-      features: ["Payment Gateway", "Inventory", "Analytics", "Mobile Ready"],
-      color: "from-yellow-500 to-orange-500"
+      title: "E-Commerce Development",
+      description: "Complete e-commerce solutions with payment integration, inventory management, and comprehensive analytics.",
+      features: ["Payment Gateway", "Inventory Management", "Analytics", "Mobile Commerce"],
+      color: "from-orange-500 to-red-400"
     },
     {
       icon: Database,
-      title: "Database Design",
-      description: "Efficient database architecture and optimization for high-performance data management.",
-      features: ["SQL/NoSQL", "Optimization", "Backup", "Security"],
-      color: "from-indigo-500 to-purple-500"
+      title: "Database Solutions",
+      description: "Efficient database architecture and optimization for high-performance data management and business intelligence.",
+      features: ["SQL/NoSQL", "Performance Optimization", "Data Security", "Backup Solutions"],
+      color: "from-red-500 to-orange-400"
     }
   ];
 
   return (
-    <section className="py-20 bg-slate-900">
+    <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-2 mb-4">
-            <Sparkles className="w-6 h-6 text-cyan-400" />
-            <span className="text-cyan-400 font-medium">Our Services</span>
+            <Sparkles className="w-6 h-6 text-orange-500" />
+            <span className="text-orange-500 font-medium">Our Services</span>
           </div>
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
-            What We Do
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+            Comprehensive Development Solutions
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            We offer comprehensive development solutions tailored to meet your unique business needs and objectives.
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            We offer end-to-end development services tailored to meet your unique business needs and drive growth across different industries.
           </p>
         </div>
 
@@ -78,29 +78,29 @@ const Services = () => {
           {services.map((service, index) => (
             <Card 
               key={index} 
-              className="bg-slate-800/50 border-slate-700 hover:border-slate-600 transition-all duration-300 group hover:transform hover:-translate-y-2 backdrop-blur-sm"
+              className="bg-white border-gray-200 hover:border-orange-300 hover:shadow-lg transition-all duration-300 group hover:transform hover:-translate-y-2"
             >
               <CardHeader className="pb-4">
                 <div className={`w-12 h-12 rounded-lg bg-gradient-to-r ${service.color} p-3 mb-4 group-hover:scale-110 transition-transform duration-300`}>
                   <service.icon className="w-6 h-6 text-white" />
                 </div>
-                <CardTitle className="text-white text-xl mb-2">{service.title}</CardTitle>
-                <CardDescription className="text-gray-300 text-base leading-relaxed">
+                <CardTitle className="text-gray-900 text-xl mb-2">{service.title}</CardTitle>
+                <CardDescription className="text-gray-600 text-base leading-relaxed">
                   {service.description}
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-2 mb-6">
                   {service.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-center gap-2 text-sm text-gray-400">
-                      <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full"></div>
+                    <div key={idx} className="flex items-center gap-2 text-sm text-gray-600">
+                      <div className="w-1.5 h-1.5 bg-orange-500 rounded-full"></div>
                       {feature}
                     </div>
                   ))}
                 </div>
                 <Button 
                   variant="ghost" 
-                  className="w-full text-cyan-400 hover:text-white hover:bg-cyan-500/20 group/btn"
+                  className="w-full text-orange-500 hover:text-white hover:bg-orange-500 group/btn"
                 >
                   Learn More
                   <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
