@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { 
@@ -9,7 +8,10 @@ import {
   ShoppingCart, 
   Database,
   ArrowRight,
-  Sparkles
+  Sparkles,
+  Code,
+  Target,
+  Layout
 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
@@ -19,45 +21,45 @@ const Services = () => {
 
   const services = [
     {
-      icon: Globe,
-      title: "Web Development",
-      description: "Custom web applications built with modern technologies like React, Next.js, and TypeScript for optimal performance.",
-      features: ["Responsive Design", "SEO Optimized", "Fast Loading", "Modern UI/UX"],
+      icon: Code,
+      title: "Software Development",
+      description: "Custom software applications built with modern technologies for optimal performance.",
+      features: ["Web Development", "Mobile Development", "Enterprise Solutions", "Custom CRM/ERP"],
       color: "from-orange-500 to-red-500"
     },
     {
-      icon: Smartphone,
-      title: "Mobile App Development",
-      description: "Native and cross-platform mobile applications that deliver exceptional user experiences across all devices.",
-      features: ["iOS & Android", "React Native", "Cross-Platform", "Native Performance"],
+      icon: Layout,
+      title: "Digital Design",
+      description: "Stunning and intuitive user interfaces and experiences tailored to your brand.",
+      features: ["UI/UX Design", "Branding", "Graphic Design", "Prototyping"],
       color: "from-red-500 to-orange-600"
     },
     {
       icon: Brain,
-      title: "AI & Machine Learning",
-      description: "Intelligent applications powered by machine learning and artificial intelligence to automate and optimize your business processes.",
-      features: ["Machine Learning", "AI Integration", "Process Automation", "Data Analytics"],
+      title: "AI Solutions",
+      description: "Intelligent applications powered by artificial intelligence to automate and optimize your business processes.",
+      features: ["Machine Learning", "Natural Language Processing", "Computer Vision", "Predictive Analytics"],
       color: "from-orange-600 to-yellow-500"
     },
     {
-      icon: Cloud,
-      title: "Cloud Solutions",
-      description: "Scalable cloud infrastructure and deployment solutions for reliable, high-performance applications and data management.",
-      features: ["AWS/Azure/GCP", "DevOps", "Scalable Architecture", "Security"],
+      icon: Globe,
+      title: "SEO",
+      description: "Improve your search engine ranking and drive organic traffic to your website.",
+      features: ["Keyword Research", "On-Page SEO", "Off-Page SEO", "Technical SEO"],
       color: "from-red-600 to-orange-500"
     },
     {
-      icon: ShoppingCart,
-      title: "E-Commerce Development",
-      description: "Complete e-commerce solutions with payment integration, inventory management, and comprehensive analytics.",
-      features: ["Payment Gateway", "Inventory Management", "Analytics", "Mobile Commerce"],
+      icon: Target,
+      title: "Digital Marketing",
+      description: "Comprehensive digital marketing strategies to boost your online presence and reach your target audience.",
+      features: ["Social Media Marketing", "Content Marketing", "Email Marketing", "Paid Advertising"],
       color: "from-orange-500 to-red-400"
     },
     {
-      icon: Database,
-      title: "Database Solutions",
-      description: "Efficient database architecture and optimization for high-performance data management and business intelligence.",
-      features: ["SQL/NoSQL", "Performance Optimization", "Data Security", "Backup Solutions"],
+      icon: Cloud,
+      title: "Cloud Solution",
+      description: "Scalable cloud infrastructure and deployment solutions for reliable, high-performance applications and data management.",
+      features: ["Cloud Migration", "Cloud Security", "Managed Cloud Services", "Cloud Optimization"],
       color: "from-red-500 to-orange-400"
     }
   ];
@@ -96,7 +98,7 @@ const Services = () => {
   }, []);
 
   return (
-    <section className="py-20 bg-white">
+    <section id="services" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-2 mb-4">
@@ -104,10 +106,10 @@ const Services = () => {
             <span className="text-orange-500 font-medium">Our Services</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
-            Comprehensive Development Solutions
+            Explore Our Comprehensive Service Offerings Solutions Tailored to Your Needs
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We offer end-to-end development services tailored to meet your unique business needs and drive growth across different industries.
+            Our development process is designed to deliver high-quality, customized solutions efficiently.
           </p>
         </div>
 

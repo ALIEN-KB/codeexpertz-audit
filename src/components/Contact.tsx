@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -16,27 +15,27 @@ import {
 const Contact = () => {
   const contactInfo = [
     {
+      icon: MapPin,
+      title: "Our Location",
+      value: "4V7F+QFV opposite Faizan-e-Madina, Mohalla Rehmanpura, Narowal",
+      description: "Visit us at our office"
+    },
+    {
       icon: Mail,
       title: "Email Us",
-      value: "info@codeexpertz.com",
+      value: "codeexpertss@gmail.com",
       description: "Send us your project requirements"
     },
     {
       icon: Phone,
       title: "Call Us",
-      value: "+1 (555) 123-4567",
-      description: "Mon-Fri from 9am to 6pm EST"
-    },
-    {
-      icon: MapPin,
-      title: "Global Services",
-      value: "Worldwide Coverage",
-      description: "Serving clients across the globe"
+      value: "03156801933, 0333-5576831",
+      description: "Connect with us anytime"
     }
   ];
 
   return (
-    <section className="py-20 bg-white">
+    <section id="contact" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <div className="flex items-center justify-center gap-2 mb-4">
@@ -132,56 +131,23 @@ const Contact = () => {
           <div className="space-y-8">
             <Card className="bg-gradient-to-br from-orange-50 to-red-50 border-orange-200">
               <CardContent className="p-6">
-                <div className="flex items-center gap-4 mb-4">
-                  <Clock className="w-6 h-6 text-orange-500" />
-                  <div>
-                    <h3 className="text-gray-900 font-semibold">Business Hours</h3>
-                    <p className="text-gray-600 text-sm">We're here to help</p>
-                  </div>
-                </div>
-                <div className="space-y-2 text-sm">
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Monday - Friday</span>
-                    <span className="text-gray-900">9:00 AM - 6:00 PM EST</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Saturday</span>
-                    <span className="text-gray-900">10:00 AM - 2:00 PM EST</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-gray-600">Sunday</span>
-                    <span className="text-gray-900">Closed</span>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-gradient-to-br from-orange-50 to-red-50 border-orange-200">
-              <CardContent className="p-6">
-                <div className="flex items-center gap-4 mb-4">
-                  <Globe className="w-6 h-6 text-orange-500" />
-                  <div>
-                    <h3 className="text-gray-900 font-semibold">Global Reach</h3>
-                    <p className="text-gray-600 text-sm">Serving clients worldwide</p>
-                  </div>
-                </div>
+                <h3 className="text-gray-900 font-semibold mb-3">Registered in</h3>
+                <p className="text-gray-700 text-sm mb-4">
+                  Narowal, Pakistan
+                </p>
+                <h3 className="text-gray-900 font-semibold mb-3">Company number:</h3>
                 <p className="text-gray-700 text-sm">
-                  We work with clients from around the globe, delivering bespoke software solutions 
-                  tailored to different industries. Remote collaboration is our specialty, and we're 
-                  always ready to help you achieve your business goals.
+                  03156801933
                 </p>
               </CardContent>
             </Card>
 
             <div className="bg-gradient-to-r from-orange-500/10 to-red-500/10 rounded-lg p-6 border border-orange-200">
-              <h3 className="text-gray-900 font-semibold mb-3">Ready to get started?</h3>
+              <h3 className="text-gray-900 font-semibold mb-3">Follow Us</h3>
+              {/* Add social media icons here if needed */}
               <p className="text-gray-700 text-sm mb-4">
-                Book a free consultation call to discuss your project requirements and get a custom quote 
-                for your bespoke software solution.
+                Connect with us on social media for updates and insights.
               </p>
-              <Button variant="outline" className="border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white">
-                Schedule a Call
-              </Button>
             </div>
           </div>
         </div>

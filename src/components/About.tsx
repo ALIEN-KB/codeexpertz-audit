@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { 
@@ -28,24 +27,17 @@ const About = () => {
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-orange-50 to-red-50">
+    <section id="about" className="py-20 bg-gradient-to-br from-orange-50 to-red-50">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
           <div className="space-y-8">
             <div>
               <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
-                About CodeExpert
+                What Sets Us Apart
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                We are a team of passionate developers and designers dedicated to creating exceptional 
-                bespoke software solutions. With over a decade of experience in the industry, we've helped 
-                businesses across different sectors achieve their digital transformation goals.
-              </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                Our expertise spans across modern web technologies, mobile development, AI solutions, 
-                and cloud infrastructure. We believe in delivering not just code, but complete solutions 
-                that drive measurable business growth and competitive advantage.
+                We've propelled our clients to new heights with our innovative strategies and unwavering commitment to excellence.
               </p>
             </div>
 
@@ -53,12 +45,18 @@ const About = () => {
             <div className="space-y-4">
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Why Choose CodeExpert?</h3>
               <div className="grid grid-cols-1 gap-3">
-                {values.map((value, index) => (
-                  <div key={index} className="flex items-start gap-3">
-                    <CheckCircle className="w-5 h-5 text-orange-500 mt-0.5 flex-shrink-0" />
-                    <span className="text-gray-700">{value}</span>
-                  </div>
-                ))}
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-orange-500 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700">Loyal clients served with successful projects and unparalleled satisfaction.</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-orange-500 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700">Collaborations with industry leaders, establishing our reputation as a trusted digital innovator.</span>
+                </div>
+                <div className="flex items-start gap-3">
+                  <CheckCircle className="w-5 h-5 text-orange-500 mt-0.5 flex-shrink-0" />
+                  <span className="text-gray-700">Expert team members bringing diverse skills and creativity to every project we undertake.</span>
+                </div>
               </div>
             </div>
 
